@@ -1,31 +1,36 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
-  </div>
+  <v-app>
+    <core-header />
+
+
+    <core-toolbar />
+
+    <core-view />
+
+    <core-footer />
+
+  </v-app>
 </template>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-#nav {
-  padding: 30px;
-}
+<script lang="ts">
+import CoreFooter from '@/components/core/Footer.vue';
+import CoreHeader from '@/components/core/Header.vue';
+import CoreToolbar from '@/components/core/Toolbar.vue';
+import CoreView from '@/components/core/View.vue';
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
 
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
-</style>
+export default {
+  name: 'App',
+  components: {
+      CoreHeader,
+      CoreFooter,
+      CoreToolbar,
+      CoreView,
+  },
+  data: () => {
+    return {
+      //
+    };
+  },
+};
+</script>
