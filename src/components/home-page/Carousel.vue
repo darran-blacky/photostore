@@ -1,8 +1,5 @@
 <template>
     <v-container
-      align-center
-      grid-list-md
-      
     >
     <v-carousel
       delimiter-icon="stop"
@@ -17,7 +14,7 @@
     </v-carousel>
   </v-container>
 </template>
-<<script lang='ts'>
+<script lang='ts'>
 export default {
   props: {
     items: Array,
